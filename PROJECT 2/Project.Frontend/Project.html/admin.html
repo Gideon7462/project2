@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../project.css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Admin Dashboard</h2>
+        
+        <!-- Button to toggle the registration form visibility -->
+        <button onclick="toggleRegisterForm()">Create New User</button>
+
+        <!-- Registration form, initially hidden -->
+        <div id="registerForm" class="form-container" style="display: none;">
+            <h3>Register New User</h3>
+            <form onsubmit="registerUser(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Section to display user activity logs -->
+        <div id="logSection">
+            <h3>User Activity Logs:</h3>
+            <div id="logs"></div>
+        </div>
+    </div>
+
+    <script src="../project.js/admin.js"></script>
+</body>
+</html>
+
